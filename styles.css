@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #120000, #390000);
+}
+
+.navbar {
+  background: linear-gradient(to left, #1b1b1b 0%, #000000 100%);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  position: relative;
+  margin: 0 15px; /* Add space between items */
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 16px 24px;
+  color: rgb(255, 55, 55);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative; /* Position relative for the animation effect */
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-radius: 20px;
+  cursor: grab; /* Change to pointer */
+  transform: translateY(-5px); /* Add lift effect */
+}
+
+.navbar ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 6px;
+  background-color: #ff0000;
+  transition: width 1.4s ease, left 1.4s ease;
+  cursor: grabbing;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+  left: 0;
+}
